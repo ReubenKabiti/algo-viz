@@ -11,7 +11,16 @@ export interface PageData {
 
 const PagesContainer = ({ data }: { data: PageData[] }) => {
   return (
-    <Grid templateColumns="repeat(3, auto)" gap={2}>
+    <Grid
+      templateColumns={{
+        sm: "repeat(1, auto)",
+        md: "repeat(2, auto)",
+        lg: "repeat(4, auto)",
+      }}
+      gap={2}
+      w="fit-content"
+      mt={2}
+    >
       {data.map((page, i) => (
         <GridItem key={i}>
           <PageCard {...page} />
