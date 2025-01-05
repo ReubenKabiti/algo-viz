@@ -4,7 +4,7 @@ import Router from "./Router";
 const App = () => {
   return (
     <Box p={2}>
-      <Router />;
+      <Router />
     </Box>
   );
 };
